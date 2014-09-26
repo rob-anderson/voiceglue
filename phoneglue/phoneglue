@@ -384,7 +384,7 @@ sub dump_data
     $obj = new Data::Dumper ([$item], ["item"]);
     $obj->Indent (0);
     $obj->Useqq (1);
-    $obj->Terse (1); 
+    $obj->Terse (1);
     $result = $obj->Dump;
     chomp ($result);
     return ($result);
@@ -1449,7 +1449,7 @@ sub send_agi_client_msg
 	$bytes = join (" ",
 		       "EXEC",
 		       "Dial",
-		       "\"" . join ("|",
+		       "\"" . join ("",
 				    $agimsg->{"url"},
 				    "",
 				    "",
