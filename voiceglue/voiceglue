@@ -2775,14 +2775,15 @@ sub handle_ovxi_transfer
 
     ##  Generate the transfer command
     $url = $ovximsg->{"url"};
-    if ($url =~ /^sip:/i)
-    {
-	$url =~ s/^sip:/sip\//i;
-    }
-    else
-    {
-	$url = "sip/" . $url;
-    };
+    # Don't massage the url here is it breaks non-SIP transfers
+    # if ($url =~ /^sip:/i)
+    # {
+	# $url =~ s/^sip:/sip\//i;
+    # }
+    # else
+    # {
+	# $url = "sip/" . $url;
+    # };
     $satc_command = {Satc::MSGTYPE => Satc::TRANSFER,
 		     Satc::CALLID => $callid,
 		     Satc::URL => $url,
