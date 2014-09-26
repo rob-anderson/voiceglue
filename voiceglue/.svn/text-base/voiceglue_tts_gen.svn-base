@@ -1,0 +1,5 @@
+#!/usr/bin/perl --       -*-CPerl-*-
+$file = $::ARGV[2];
+system ("flite", @::ARGV[0..2]);
+system ("mv", $file, $file . ".16khz.wav");
+system ("sox", $file . ".16khz.wav", "-r", "8000", $file);

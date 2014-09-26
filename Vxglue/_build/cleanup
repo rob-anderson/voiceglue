@@ -1,0 +1,9 @@
+do{ my $x = {
+       'blib/arch/auto/Vxglue/Vxglue.bs' => 1,
+       'lib/Vxglue.c' => 1,
+       'lib/Vxglue.o' => 1,
+       'Vxglue-*' => 1,
+       'blib' => 1,
+       'blib/arch/auto/Vxglue/Vxglue.so' => 1
+     };
+$x; }
